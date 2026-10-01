@@ -1,0 +1,70 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Copilot Usage",
+        "description": "What do you want to monitor?",
+        "menu_options": {
+          "device": "Copilot quotas — sign in with GitHub",
+          "token": "Copilot quotas — paste a GitHub token",
+          "billing": "Copilot billed usage (premium requests / AI credits) via the billing API"
+        }
+      },
+      "token": {
+        "title": "GitHub token",
+        "description": "Paste a GitHub OAuth token of the Copilot user, for example the output of `gh auth token`.",
+        "data": {
+          "token": "Token"
+        }
+      },
+      "billing": {
+        "title": "GitHub billing API",
+        "description": "Use a fine-grained personal access token with the **Plan: read** user permission (for an organisation: a token with **Administration: read** on the org). Leave the name empty to use the token owner.",
+        "data": {
+          "token": "Token",
+          "target_type": "Account type",
+          "target": "Username or organisation"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Re-authenticate",
+        "description": "The stored GitHub token no longer works. Continue to sign in again."
+      }
+    },
+    "progress": {
+      "wait_for_device": "1. Open {url}\n2. Enter the code **{code}**\n3. Approve access — this page continues automatically."
+    },
+    "error": {
+      "invalid_auth": "GitHub rejected the token.",
+      "no_copilot": "This account has no Copilot access (or the token cannot read it).",
+      "cannot_connect": "Could not reach GitHub. Try again later.",
+      "target_required": "Enter the username or organisation."
+    },
+    "abort": {
+      "already_configured": "This account is already configured.",
+      "reauth_successful": "Re-authentication successful.",
+      "device_failed": "The GitHub sign-in expired or was denied. Start again.",
+      "invalid_auth": "GitHub rejected the token.",
+      "no_copilot": "This account has no Copilot access.",
+      "cannot_connect": "Could not reach GitHub. Try again later."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Polling",
+        "data": {
+          "scan_interval": "Update interval (seconds)"
+        }
+      }
+    }
+  },
+  "selector": {
+    "target_type": {
+      "options": {
+        "user": "Personal account",
+        "organization": "Organisation"
+      }
+    }
+  }
+}
