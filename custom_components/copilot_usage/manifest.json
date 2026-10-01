@@ -1,12 +1,14 @@
 {
   "domain": "copilot_usage",
   "name": "Copilot Usage",
-  "codeowners": ["@stevengoossensB"],
+  "codeowners": [
+    "@stevengoossensB"
+  ],
   "config_flow": true,
   "documentation": "https://github.com/stevengoossensB/ha-copilot-usage",
   "integration_type": "service",
   "iot_class": "cloud_polling",
   "issue_tracker": "https://github.com/stevengoossensB/ha-copilot-usage/issues",
   "requirements": [],
-  "version": "0.1.0"
+  "version": "0.1.1"
 }
